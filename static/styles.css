@@ -1,0 +1,112 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #2563eb, #0f172a);
+  color: white;
+  padding: 32px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.hero .button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 16px;
+  background: white;
+  color: #2563eb;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: white;
+  color: #334155;
+  font-weight: 600;
+  border: 1px solid #dbe2ea;
+}
+
+.tab.active {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.card, .job-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.card strong {
+  display: block;
+  font-size: 1.2rem;
+}
+
+.jobs {
+  display: grid;
+  gap: 16px;
+}
+
+.job-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.pill {
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+
+.meta {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.meta-role {
+  color: #2563eb;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin: 4px 0 10px;
+  text-transform: capitalize;
+}
+
+.job-card a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}

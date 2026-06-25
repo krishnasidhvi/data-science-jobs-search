@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Data Science Jobs (0-3 Years)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <h1>Data Science Positions in Hyderabad, India (0-3 Years)</h1>
+        <p>Aggregated from public job sources such as Naukri, LinkedIn, Google and refreshed daily at 02:00 IST.</p>
+        <a class="button" href="/refresh">Refresh now</a>
+      </section>
+
+      <section class="tabs" aria-label="Role tabs">
+        <a class="tab {% if selected_role == 'all' %}active{% endif %}" href="/">All Roles</a>
+        <a class="tab {% if selected_role == 'data-analyst' %}active{% endif %}" href="/?role=data-analyst">Data Analyst</a>
+        <a class="tab {% if selected_role == 'data-engineer' %}active{% endif %}" href="/?role=data-engineer">Data Engineer</a>
+        <a class="tab {% if selected_role == 'data-scientist' %}active{% endif %}" href="/?role=data-scientist">Data Scientist</a>
+      </section>
+
+      <section class="stats">
+        <div class="card">
+          <strong>{{ jobs|length }}</strong>
+          <span>Open roles</span>
+        </div>
+        <div class="card">
+          <strong>Daily</strong>
+          <span>Scheduled refresh</span>
+        </div>
+        <div class="card">
+          <strong>Public</strong>
+          <span>Sources aggregated</span>
+        </div>
+      </section>
+
+      <section class="jobs">
+        {% for job in jobs %}
+        <article class="job-card">
+          <div class="job-head">
+            <h3>{{ job.title }}</h3>
+            <span class="pill">{{ job.experience }}</span>
+          </div>
+          <p class="meta-role">{{ job.role|replace('-', ' ')|title }}</p>
+          <p class="meta">{{ job.company }} · {{ job.location }} · {{ job.source }}</p>
+          <p>{{ job.description }}</p>
+          <a href="{{ job.url }}" target="_blank" rel="noreferrer">View role</a>
+        </article>
+        {% else %}
+        <p>No jobs found yet. The refresh job will populate this list.</p>
+        {% endfor %}
+      </section>
+    </main>
+  </body>
+</html>
