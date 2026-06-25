@@ -115,8 +115,8 @@ def classify_role(title: str, description: str) -> str:
 
 
 def is_data_science_role(title: str, description: str) -> bool:
-    text = f"{normalize_text(title)} {normalize_text(description)}"
-    return any(keyword in text for keyword in DATA_SCIENCE_KEYWORDS)
+    role = classify_role(title, description)
+    return role in ROLE_KEYWORDS
 
 
 def has_entry_or_mid_level_experience(title: str, description: str) -> bool:
@@ -167,7 +167,7 @@ def fetch_naukri_jobs() -> List[Dict[str, Any]]:
             href = anchor.get("href", "")
             if not text or len(text) < 8 or not href.startswith("http"):
                 continue
-            if not any(token in text for token in ["data scientist", "data science", "data analyst", "machine learning", "ai", "ml"]):
+            if not any(token in text for token in ["data scientist", "data science", "data analyst", "analytics", "machine learning", "ai", "ml", "data engineer", "etl", "pipeline", "spark", "warehouse", "dbt"]):
                 continue
             title = text.title()
             jobs.append(make_job_payload(title, "Naukri", "Hyderabad, India", text, "Naukri", href))
@@ -192,7 +192,7 @@ def fetch_linkedin_jobs() -> List[Dict[str, Any]]:
             href = anchor.get("href", "")
             if not text or len(text) < 8 or not href.startswith("http"):
                 continue
-            if not any(token in text for token in ["data scientist", "data science", "machine learning", "analytics", "intern"]):
+            if not any(token in text for token in ["data scientist", "data science", "machine learning", "analytics", "data analyst", "intern", "data engineer", "etl", "pipeline", "spark", "warehouse", "dbt"]):
                 continue
             jobs.append(make_job_payload(text.title(), "LinkedIn", "Hyderabad, India", text, "LinkedIn", href))
             if len(jobs) >= 6:
@@ -216,7 +216,7 @@ def fetch_google_jobs() -> List[Dict[str, Any]]:
             text = normalize_text(anchor.get_text(" ", strip=True))
             if not href.startswith("http") or not href.startswith(("https://www.linkedin.com", "https://www.naukri.com", "https://in.indeed.com")):
                 continue
-            if not any(token in text for token in ["data scientist", "data science", "machine learning", "analyst"]):
+            if not any(token in text for token in ["data scientist", "data science", "machine learning", "analyst", "analytics", "data engineer", "etl", "pipeline", "spark", "warehouse", "dbt"]):
                 continue
             jobs.append(make_job_payload(text.title(), "Google Search", "Hyderabad, India", text, "Google", href))
             if len(jobs) >= 6:
@@ -282,9 +282,7 @@ def collect_jobs() -> List[Dict[str, Any]]:
     jobs.extend(fetch_naukri_jobs())
     jobs.extend(fetch_linkedin_jobs())
     jobs.extend(fetch_google_jobs())
-
-    if not jobs:
-        jobs.extend(fetch_sample_jobs())
+    jobs.extend(fetch_sample_jobs())
 
     jobs = [
         job

@@ -1,5 +1,82 @@
 [
   {
+    "title": "Junior Data Scientist",
+    "company": "Example Labs",
+    "location": "Hyderabad, India",
+    "description": "A beginner-friendly role focused on analytics and dashboarding in Hyderabad.",
+    "experience": "0-1 years",
+    "url": "https://example.com/jobs/1",
+    "source": "Sample",
+    "role": "data-scientist",
+    "posted_at": "2026-06-25T10:20:37.808354+00:00"
+  },
+  {
+    "title": "Data Science Intern",
+    "company": "Growth AI",
+    "location": "Hyderabad, India",
+    "description": "Work on experimentation, forecasting, and reporting for an early-stage team.",
+    "experience": "0-1 years",
+    "url": "https://example.com/jobs/2",
+    "source": "Sample",
+    "role": "data-scientist",
+    "posted_at": "2026-06-25T10:20:37.808354+00:00"
+  },
+  {
+    "title": "Associate Data Analyst",
+    "company": "InsightWorks",
+    "location": "Hyderabad, India",
+    "description": "Entry-level analytics role with SQL, Python, and dashboards.",
+    "experience": "0-2 years",
+    "url": "https://example.com/jobs/3",
+    "source": "Sample",
+    "role": "data-analyst",
+    "posted_at": "2026-06-25T10:20:37.808354+00:00"
+  },
+  {
+    "title": "Junior Data Engineer",
+    "company": "DataForge",
+    "location": "Hyderabad, India",
+    "description": "Entry-level role building ETL pipelines and data warehouses with Spark.",
+    "experience": "0-2 years",
+    "url": "https://example.com/jobs/4",
+    "source": "Sample",
+    "role": "data-engineer",
+    "posted_at": "2026-06-25T10:20:37.808354+00:00"
+  },
+  {
+    "title": "Data Engineering Analyst - Hih - Evernorth",
+    "company": "LinkedIn",
+    "location": "Hyderabad, India",
+    "description": "data engineering analyst - hih - evernorth",
+    "experience": "0-3 years",
+    "url": "https://in.linkedin.com/jobs/view/data-engineering-analyst-hih-evernorth-at-evernorth-health-services-4421933288?position=1&pageNum=0&refId=WqlKJ0VuIoZnj2Tn18h04Q%3D%3D&trackingId=Whr7zINFIZd8KVsqaOXNog%3D%3D",
+    "source": "LinkedIn",
+    "role": "data-engineer",
+    "posted_at": "2026-06-25T10:20:37.170860+00:00"
+  },
+  {
+    "title": "Specialist/Sr. Specialist - Global Analytics And Reporting - Human Capital",
+    "company": "LinkedIn",
+    "location": "Hyderabad, India",
+    "description": "specialist/sr. specialist - global analytics and reporting - human capital",
+    "experience": "0-3 years",
+    "url": "https://in.linkedin.com/jobs/view/specialist-sr-specialist-global-analytics-and-reporting-human-capital-at-d-e-shaw-india-private-limited-4421872436?position=3&pageNum=0&refId=WqlKJ0VuIoZnj2Tn18h04Q%3D%3D&trackingId=QXsWZ2Do9pVR42MZdOF%2Bqw%3D%3D",
+    "source": "LinkedIn",
+    "role": "data-analyst",
+    "posted_at": "2026-06-25T10:20:37.170860+00:00"
+  },
+  {
+    "title": "Irs26127 Maize Breeder (Internationally Recruited)",
+    "company": "LinkedIn",
+    "location": "Hyderabad, India",
+    "description": "irs26127 maize breeder (internationally recruited)",
+    "experience": "0-3 years",
+    "url": "https://in.linkedin.com/jobs/view/irs26127-maize-breeder-internationally-recruited-at-cimmyt-4427584365?position=7&pageNum=0&refId=WqlKJ0VuIoZnj2Tn18h04Q%3D%3D&trackingId=J8oJsfmhDMgP4Qe%2FzKijIg%3D%3D",
+    "source": "LinkedIn",
+    "role": "data-scientist",
+    "posted_at": "2026-06-25T10:20:37.170860+00:00"
+  },
+  {
     "title": "Data Scientist Jobs",
     "company": "LinkedIn",
     "location": "Hyderabad, India",
@@ -8,17 +85,6 @@
     "url": "https://www.linkedin.com/jobs/data-scientist-jobs?trk=public_jobs_similar-title",
     "source": "LinkedIn",
     "role": "data-scientist",
-    "posted_at": "2026-06-25T09:43:06.742201+00:00"
-  },
-  {
-    "title": "Data Scientist Jobs",
-    "company": "LinkedIn",
-    "location": "Hyderabad, India",
-    "description": "data scientist jobs",
-    "experience": "0-3 years",
-    "url": "https://www.linkedin.com/jobs/data-scientist-jobs?trk=public_jobs_linkster_link",
-    "source": "LinkedIn",
-    "role": "data-scientist",
-    "posted_at": "2026-06-25T09:43:06.742201+00:00"
+    "posted_at": "2026-06-25T10:20:37.170860+00:00"
   }
 ]

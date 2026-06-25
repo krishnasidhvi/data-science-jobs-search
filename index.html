@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Science Jobs (0-3 Years)</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #07111f;
+        --card: #0f172a;
+        --text: #f8fafc;
+        --muted: #94a3b8;
+        --accent: #38bdf8;
+        --accent-2: #22c55e;
+        --border: rgba(255, 255, 255, 0.1);
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, var(--bg), #111827);
+        color: var(--text);
+      }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 24px 20px 60px;
+      }
+      .hero {
+        text-align: center;
+        padding: 48px 0 26px;
+      }
+      .hero h1 { font-size: clamp(1.8rem, 3vw, 2.8rem); margin: 0 0 12px; }
+      .hero p { color: var(--muted); max-width: 760px; margin: 0 auto; line-height: 1.6; }
+      .tabs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin: 28px 0 12px;
+      }
+      .tab {
+        border: 1px solid var(--border);
+        background: rgba(255,255,255,0.05);
+        color: var(--text);
+        padding: 10px 14px;
+        border-radius: 999px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .tab.active {
+        background: var(--accent);
+        color: #07111f;
+        font-weight: 700;
+      }
+      .stats {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+        margin: 10px 0 24px;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      .stats span { background: rgba(255,255,255,0.06); padding: 8px 12px; border-radius: 999px; }
+      .jobs {
+        display: grid;
+        gap: 16px;
+      }
+      .job {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 18px 20px;
+        box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+      }
+      .job-head { display: flex; justify-content: space-between; align-items: start; gap: 12px; }
+      .job h3 { margin: 0 0 8px; font-size: 1.15rem; }
+      .pill {
+        display: inline-block;
+        padding: 6px 10px;
+        border-radius: 999px;
+        font-size: 0.8rem;
+        background: rgba(56,189,248,0.16);
+        color: #bae6fd;
+        border: 1px solid rgba(56,189,248,0.25);
+        white-space: nowrap;
+      }
+      .meta { color: var(--muted); margin: 8px 0; line-height: 1.5; }
+      .desc { color: #e2e8f0; line-height: 1.6; margin: 8px 0 12px; }
+      .job a { color: var(--accent); text-decoration: none; font-weight: 600; }
+      .empty { text-align: center; color: var(--muted); padding: 24px; border: 1px dashed var(--border); border-radius: 16px; }
+      @media (max-width: 700px) {
+        .job-head { flex-direction: column; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <section class="hero">
+        <h1>Data Science Positions in Hyderabad, India (0-3 Years)</h1>
+        <p>Open roles collected from public job sources and refreshed locally for easy browsing.</p>
+      </section>
+
+      <nav class="tabs" aria-label="Role tabs">
+        <a class="tab active" href="./?role=all">All Roles</a>
+        <a class="tab" href="./?role=data-analyst">Data Analyst</a>
+        <a class="tab" href="./?role=data-engineer">Data Engineer</a>
+        <a class="tab" href="./?role=data-scientist">Data Scientist</a>
+      </nav>
+
+      <div class="stats">
+        <span id="count">0 open roles</span>
+        <span>Hyderabad, India</span>
+        <span>0-3 years</span>
+      </div>
+
+      <section id="jobs" class="jobs"></section>
+    </main>
+
+    <script>
+      const roleParam = new URLSearchParams(window.location.search).get('role') || 'all';
+      const roles = ['all', 'data-analyst', 'data-engineer', 'data-scientist'];
+      document.querySelectorAll('.tab').forEach((tab) => {
+        const tabRole = tab.getAttribute('href').split('role=')[1] || 'all';
+        if (tabRole === roleParam) {
+          tab.classList.add('active');
+        } else {
+          tab.classList.remove('active');
+        }
+      });
+
+      async function loadJobs() {
+        const jobsEl = document.getElementById('jobs');
+        try {
+          const response = await fetch('./data/jobs.json');
+          const jobs = await response.json();
+          const filtered = jobs.filter((job) => {
+            if (roleParam === 'all') return true;
+            return (job.role || '').toLowerCase() === roleParam;
+          });
+
+          document.getElementById('count').textContent = `${filtered.length} open role${filtered.length === 1 ? '' : 's'}`;
+
+          if (!filtered.length) {
+            jobsEl.innerHTML = '<div class="empty">No jobs match this role right now.</div>';
+            return;
+          }
+
+          jobsEl.innerHTML = filtered.map((job) => `
+            <article class="job">
+              <div class="job-head">
+                <div>
+                  <h3>${job.title}</h3>
+                  <div class="pill">${(job.role || 'data-role').replace(/-/g, ' ')}</div>
+                </div>
+                <div class="pill">${job.experience || '0-3 years'}</div>
+              </div>
+              <div class="meta">${job.company} · ${job.location} · ${job.source}</div>
+              <p class="desc">${job.description || 'No description provided.'}</p>
+              <a href="${job.url}" target="_blank" rel="noreferrer">View role</a>
+            </article>
+          `).join('');
+        } catch (error) {
+          jobsEl.innerHTML = '<div class="empty">Unable to load job data right now.</div>';
+        }
+      }
+
+      loadJobs();
+    </script>
+  </body>
+</html>
