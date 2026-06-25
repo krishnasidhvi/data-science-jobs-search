@@ -5,21 +5,10 @@
     "location": "Hyderabad, India",
     "description": "A beginner-friendly role focused on analytics and dashboarding in Hyderabad.",
     "experience": "0-1 years",
-    "url": "https://example.com/jobs/1",
+    "url": "https://www.google.com/search?q=Data%20Scientist%20jobs%20Hyderabad%20India",
     "source": "Sample",
     "role": "data-scientist",
-    "posted_at": "2026-06-25T10:20:37.808354+00:00"
-  },
-  {
-    "title": "Data Science Intern",
-    "company": "Growth AI",
-    "location": "Hyderabad, India",
-    "description": "Work on experimentation, forecasting, and reporting for an early-stage team.",
-    "experience": "0-1 years",
-    "url": "https://example.com/jobs/2",
-    "source": "Sample",
-    "role": "data-scientist",
-    "posted_at": "2026-06-25T10:20:37.808354+00:00"
+    "posted_at": "2026-06-25T10:38:00.804067+00:00"
   },
   {
     "title": "Associate Data Analyst",
@@ -27,10 +16,10 @@
     "location": "Hyderabad, India",
     "description": "Entry-level analytics role with SQL, Python, and dashboards.",
     "experience": "0-2 years",
-    "url": "https://example.com/jobs/3",
+    "url": "https://www.google.com/search?q=Data%20Analyst%20jobs%20Hyderabad%20India",
     "source": "Sample",
     "role": "data-analyst",
-    "posted_at": "2026-06-25T10:20:37.808354+00:00"
+    "posted_at": "2026-06-25T10:38:00.804067+00:00"
   },
   {
     "title": "Junior Data Engineer",
@@ -38,53 +27,75 @@
     "location": "Hyderabad, India",
     "description": "Entry-level role building ETL pipelines and data warehouses with Spark.",
     "experience": "0-2 years",
-    "url": "https://example.com/jobs/4",
+    "url": "https://www.google.com/search?q=Data%20Engineer%20jobs%20Hyderabad%20India",
     "source": "Sample",
     "role": "data-engineer",
-    "posted_at": "2026-06-25T10:20:37.808354+00:00"
+    "posted_at": "2026-06-25T10:38:00.804067+00:00"
   },
   {
-    "title": "Data Engineering Analyst - Hih - Evernorth",
+    "title": "Data Scientist",
     "company": "LinkedIn",
     "location": "Hyderabad, India",
-    "description": "data engineering analyst - hih - evernorth",
+    "description": "data scientist",
     "experience": "0-3 years",
-    "url": "https://in.linkedin.com/jobs/view/data-engineering-analyst-hih-evernorth-at-evernorth-health-services-4421933288?position=1&pageNum=0&refId=WqlKJ0VuIoZnj2Tn18h04Q%3D%3D&trackingId=Whr7zINFIZd8KVsqaOXNog%3D%3D",
-    "source": "LinkedIn",
-    "role": "data-engineer",
-    "posted_at": "2026-06-25T10:20:37.170860+00:00"
-  },
-  {
-    "title": "Specialist/Sr. Specialist - Global Analytics And Reporting - Human Capital",
-    "company": "LinkedIn",
-    "location": "Hyderabad, India",
-    "description": "specialist/sr. specialist - global analytics and reporting - human capital",
-    "experience": "0-3 years",
-    "url": "https://in.linkedin.com/jobs/view/specialist-sr-specialist-global-analytics-and-reporting-human-capital-at-d-e-shaw-india-private-limited-4421872436?position=3&pageNum=0&refId=WqlKJ0VuIoZnj2Tn18h04Q%3D%3D&trackingId=QXsWZ2Do9pVR42MZdOF%2Bqw%3D%3D",
-    "source": "LinkedIn",
-    "role": "data-analyst",
-    "posted_at": "2026-06-25T10:20:37.170860+00:00"
-  },
-  {
-    "title": "Irs26127 Maize Breeder (Internationally Recruited)",
-    "company": "LinkedIn",
-    "location": "Hyderabad, India",
-    "description": "irs26127 maize breeder (internationally recruited)",
-    "experience": "0-3 years",
-    "url": "https://in.linkedin.com/jobs/view/irs26127-maize-breeder-internationally-recruited-at-cimmyt-4427584365?position=7&pageNum=0&refId=WqlKJ0VuIoZnj2Tn18h04Q%3D%3D&trackingId=J8oJsfmhDMgP4Qe%2FzKijIg%3D%3D",
+    "url": "https://in.linkedin.com/jobs/view/data-scientist-at-syren-4425235771?position=1&pageNum=0&refId=oJaV8wIrdTC1XyEPpvhMQQ%3D%3D&trackingId=%2B9duL2IjloWAO6FW%2FA9foQ%3D%3D",
     "source": "LinkedIn",
     "role": "data-scientist",
-    "posted_at": "2026-06-25T10:20:37.170860+00:00"
+    "posted_at": "2026-06-25T10:37:59.871029+00:00"
   },
   {
-    "title": "Data Scientist Jobs",
+    "title": "Data Scientist",
     "company": "LinkedIn",
     "location": "Hyderabad, India",
-    "description": "data scientist jobs",
+    "description": "data scientist",
     "experience": "0-3 years",
-    "url": "https://www.linkedin.com/jobs/data-scientist-jobs?trk=public_jobs_similar-title",
+    "url": "https://in.linkedin.com/jobs/view/data-scientist-at-nstarx-4340125752?position=2&pageNum=0&refId=oJaV8wIrdTC1XyEPpvhMQQ%3D%3D&trackingId=gknnpRo9mv7j%2BWp0JpIeZg%3D%3D",
     "source": "LinkedIn",
     "role": "data-scientist",
-    "posted_at": "2026-06-25T10:20:37.170860+00:00"
+    "posted_at": "2026-06-25T10:37:59.871029+00:00"
+  },
+  {
+    "title": "Data Scientist",
+    "company": "LinkedIn",
+    "location": "Hyderabad, India",
+    "description": "data scientist",
+    "experience": "0-3 years",
+    "url": "https://in.linkedin.com/jobs/view/data-scientist-at-solenis-4297465015?position=3&pageNum=0&refId=oJaV8wIrdTC1XyEPpvhMQQ%3D%3D&trackingId=Y7YP%2FXnBdnlceUvL5T%2BSnw%3D%3D",
+    "source": "LinkedIn",
+    "role": "data-scientist",
+    "posted_at": "2026-06-25T10:37:59.871029+00:00"
+  },
+  {
+    "title": "Data Scientist",
+    "company": "LinkedIn",
+    "location": "Hyderabad, India",
+    "description": "data scientist",
+    "experience": "0-3 years",
+    "url": "https://in.linkedin.com/jobs/view/data-scientist-at-trueid-4422228797?position=4&pageNum=0&refId=oJaV8wIrdTC1XyEPpvhMQQ%3D%3D&trackingId=%2B2ERCm54Q%2Bp9YnsPBlZCXw%3D%3D",
+    "source": "LinkedIn",
+    "role": "data-scientist",
+    "posted_at": "2026-06-25T10:37:59.871029+00:00"
+  },
+  {
+    "title": "Data Scientist",
+    "company": "LinkedIn",
+    "location": "Hyderabad, India",
+    "description": "data scientist",
+    "experience": "0-3 years",
+    "url": "https://in.linkedin.com/jobs/view/data-scientist-at-cohere-health-4424115554?position=5&pageNum=0&refId=oJaV8wIrdTC1XyEPpvhMQQ%3D%3D&trackingId=PXN80EIW1V0pXtfrYZtzNw%3D%3D",
+    "source": "LinkedIn",
+    "role": "data-scientist",
+    "posted_at": "2026-06-25T10:37:59.871029+00:00"
+  },
+  {
+    "title": "Data Scientist",
+    "company": "LinkedIn",
+    "location": "Hyderabad, India",
+    "description": "data scientist",
+    "experience": "0-3 years",
+    "url": "https://in.linkedin.com/jobs/view/data-scientist-at-tag-n-trac-4426032149?position=6&pageNum=0&refId=oJaV8wIrdTC1XyEPpvhMQQ%3D%3D&trackingId=VaXaA49MMSaShS14Lfg0hw%3D%3D",
+    "source": "LinkedIn",
+    "role": "data-scientist",
+    "posted_at": "2026-06-25T10:37:59.871029+00:00"
   }
 ]

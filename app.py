@@ -155,6 +155,12 @@ def make_job_payload(title: str, company: str, location: str, description: str, 
     }
 
 
+def build_role_search_url(role: str) -> str:
+    role_label = role.replace("-", " ").strip().title()
+    query = quote(f"{role_label} jobs Hyderabad India")
+    return f"https://www.google.com/search?q={query}"
+
+
 def fetch_naukri_jobs() -> List[Dict[str, Any]]:
     try:
         url = "https://www.naukri.com/data-science-jobs-in-hyderabad?experience=0to3"
@@ -235,7 +241,7 @@ def fetch_sample_jobs() -> List[Dict[str, Any]]:
             "location": "Hyderabad, India",
             "description": "A beginner-friendly role focused on analytics and dashboarding in Hyderabad.",
             "experience": "0-1 years",
-            "url": "https://example.com/jobs/1",
+            "url": build_role_search_url("data-scientist"),
             "source": "Sample",
             "role": "data-scientist",
             "posted_at": datetime.now(timezone.utc).isoformat(),
@@ -246,7 +252,7 @@ def fetch_sample_jobs() -> List[Dict[str, Any]]:
             "location": "Hyderabad, India",
             "description": "Work on experimentation, forecasting, and reporting for an early-stage team.",
             "experience": "0-1 years",
-            "url": "https://example.com/jobs/2",
+            "url": build_role_search_url("data-scientist"),
             "source": "Sample",
             "role": "data-scientist",
             "posted_at": datetime.now(timezone.utc).isoformat(),
@@ -257,7 +263,7 @@ def fetch_sample_jobs() -> List[Dict[str, Any]]:
             "location": "Hyderabad, India",
             "description": "Entry-level analytics role with SQL, Python, and dashboards.",
             "experience": "0-2 years",
-            "url": "https://example.com/jobs/3",
+            "url": build_role_search_url("data-analyst"),
             "source": "Sample",
             "role": "data-analyst",
             "posted_at": datetime.now(timezone.utc).isoformat(),
@@ -268,7 +274,7 @@ def fetch_sample_jobs() -> List[Dict[str, Any]]:
             "location": "Hyderabad, India",
             "description": "Entry-level role building ETL pipelines and data warehouses with Spark.",
             "experience": "0-2 years",
-            "url": "https://example.com/jobs/4",
+            "url": build_role_search_url("data-engineer"),
             "source": "Sample",
             "role": "data-engineer",
             "posted_at": datetime.now(timezone.utc).isoformat(),

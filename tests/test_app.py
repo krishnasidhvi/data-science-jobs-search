@@ -1,6 +1,6 @@
 import unittest
 
-from app import classify_role, is_data_science_role, is_target_location
+from app import classify_role, fetch_sample_jobs, is_data_science_role, is_target_location
 
 
 class LocationFilterTests(unittest.TestCase):
@@ -19,6 +19,12 @@ class LocationFilterTests(unittest.TestCase):
         self.assertEqual(classify_role("Data Analyst", "Builds dashboards and SQL reports"), "data-analyst")
         self.assertEqual(classify_role("Data Engineer", "Builds ETL pipelines with Spark"), "data-engineer")
         self.assertTrue(is_data_science_role("Data Engineer", "ETL pipelines and Spark"))
+
+    def test_sample_jobs_use_real_search_links(self):
+        jobs = fetch_sample_jobs()
+        self.assertTrue(jobs)
+        self.assertFalse(any("example.com" in job["url"] for job in jobs))
+        self.assertTrue(all(job["url"].startswith("https://www.google.com/search") for job in jobs))
 
 
 if __name__ == "__main__":
